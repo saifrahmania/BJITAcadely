@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FacebookLoginPage" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="RootView">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="processed-35f48f28-7147-4cef-8d98-eede111b7be5_kXZGFUcq" translatesAutoresizingMaskIntoConstraints="NO" id="2D3-Hd-90I">
+                                <rect key="frame" x="0.0" y="0.0" width="896" height="92.5"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small" weight="heavy"/>
+                                <variation key="heightClass=compact" image="107175_circle_facebook_icon"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9vA-jB-aaI">
+                                <rect key="frame" x="0.0" y="103" width="896" height="290"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Lpd-WK-f7d" userLabel="Stack View (Lqanguage)">
+                                        <rect key="frame" x="301" y="8" width="294" height="18"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="English (United Kingdom) * বাংলা *" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Rh-oN-AfS">
+                                                <rect key="frame" x="0.0" y="0.0" width="234.5" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More.." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o2K-ub-xaM">
+                                                <rect key="frame" x="246.5" y="0.0" width="47.5" height="18"/>
+                                                <color key="tintColor" systemColor="systemBlueColor"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <color key="textColor" red="0.2588235438" green="0.5411764979" blue="0.88235294819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="highlightedColor" red="0.2588235438" green="0.5411764979" blue="0.88235294819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="redraw" axis="vertical" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="Lip-zb-yQB" userLabel="Stack View (Email and Pass)">
+                                        <rect key="frame" x="89.5" y="46" width="717" height="206"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" text="Phone or Email" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LJA-ZP-UbZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="717" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cwl-Np-5CR">
+                                                <rect key="frame" x="0.0" y="43" width="717" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kf4-Vj-oQZ">
+                                                <rect key="frame" x="0.0" y="86" width="717" height="34"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Login"/>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgotten Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tbS-4L-7Em">
+                                                <rect key="frame" x="0.0" y="129" width="717" height="34"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <color key="textColor" red="0.2588235438" green="0.5411764979" blue="0.88235294819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y1a-4G-8AT">
+                                                <rect key="frame" x="0.0" y="172" width="717" height="34"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Create New Account">
+                                                    <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Lip-zb-yQB" firstAttribute="top" secondItem="Lpd-WK-f7d" secondAttribute="bottom" constant="20" id="0Dp-hv-pfO"/>
+                                    <constraint firstItem="Lpd-WK-f7d" firstAttribute="centerX" secondItem="9vA-jB-aaI" secondAttribute="centerX" id="4Mx-Dc-Hqt"/>
+                                    <constraint firstItem="Lpd-WK-f7d" firstAttribute="top" secondItem="9vA-jB-aaI" secondAttribute="top" constant="8" id="JhN-0f-7qJ"/>
+                                    <constraint firstItem="Lip-zb-yQB" firstAttribute="centerX" secondItem="9vA-jB-aaI" secondAttribute="centerX" id="y8P-LG-9Dq"/>
+                                </constraints>
+                                <variation key="heightClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="Lpd-WK-f7d"/>
+                                        <include reference="Lip-zb-yQB"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.15294116739999999" green="0.3058823645" blue="0.60000002379999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="9vA-jB-aaI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1bV-li-dPq"/>
+                            <constraint firstItem="Lip-zb-yQB" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="4HM-K8-dcH"/>
+                            <constraint firstItem="9vA-jB-aaI" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="DRa-hi-Br3"/>
+                            <constraint firstItem="9vA-jB-aaI" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.701" id="Ddk-Qf-mH2"/>
+                            <constraint firstItem="2D3-Hd-90I" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Iag-QP-ZqX"/>
+                            <constraint firstItem="9vA-jB-aaI" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="J3D-0a-VyV"/>
+                            <constraint firstItem="2D3-Hd-90I" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.223" id="YlF-Ik-IW7"/>
+                            <constraint firstItem="Lpd-WK-f7d" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="bUV-Ou-eDW"/>
+                            <constraint firstItem="2D3-Hd-90I" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="faF-cn-0hJ"/>
+                            <constraint firstItem="2D3-Hd-90I" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="gaB-FP-kIS"/>
+                        </constraints>
+                        <variation key="heightClass=compact">
+                            <mask key="subviews">
+                                <include reference="2D3-Hd-90I"/>
+                                <include reference="9vA-jB-aaI"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="YlF-Ik-IW7"/>
+                                <include reference="4HM-K8-dcH"/>
+                                <exclude reference="bUV-Ou-eDW"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="27.861771058315338" y="56.074766355140184"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="107175_circle_facebook_icon" width="512" height="512"/>
+        <image name="processed-35f48f28-7147-4cef-8d98-eede111b7be5_kXZGFUcq" width="1080" height="523"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

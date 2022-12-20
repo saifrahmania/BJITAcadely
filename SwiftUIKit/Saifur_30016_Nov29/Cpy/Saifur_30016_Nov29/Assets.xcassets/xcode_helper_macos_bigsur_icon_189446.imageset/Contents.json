@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "xcode_helper_macos_bigsur_icon_189446.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

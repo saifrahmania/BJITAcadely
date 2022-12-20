@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OXj-5e-XWE">
+    <device id="ipad12_9rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Exercise2-->
+        <scene sceneID="IIN-Qf-74G">
+            <objects>
+                <viewController id="OXj-5e-XWE" userLabel="Exercise2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iyM-oS-C6k" userLabel="RootView">
+                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learn Autolayout!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xax-qq-QgC">
+                                <rect key="frame" x="20" y="74" width="1326" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" systemColor="tintColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xcode_helper_macos_bigsur_icon_189446" translatesAutoresizingMaskIntoConstraints="NO" id="Od3-3r-Kg6">
+                                <rect key="frame" x="10" y="113" width="1346" height="256"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="3fz-Rf-3RS">
+                                <rect key="frame" x="10" y="399" width="1346" height="31"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SCE-Kv-Qfh">
+                                        <rect key="frame" x="0.0" y="0.0" width="664.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" red="0.2588235438" green="0.5411764979" blue="0.88235294819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZZT-iY-z1a">
+                                        <rect key="frame" x="681.5" y="0.0" width="664.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" red="0.2588235438" green="0.5411764979" blue="0.88235294819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yiX-1V-a81"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3fz-Rf-3RS" firstAttribute="leading" secondItem="yiX-1V-a81" secondAttribute="leading" constant="10" id="42A-qg-S0y"/>
+                            <constraint firstItem="xax-qq-QgC" firstAttribute="top" secondItem="yiX-1V-a81" secondAttribute="top" constant="50" id="ALN-4x-xZS">
+                                <variation key="heightClass=compact" constant="90"/>
+                                <variation key="heightClass=compact-widthClass=compact" constant="40"/>
+                            </constraint>
+                            <constraint firstItem="Od3-3r-Kg6" firstAttribute="top" secondItem="xax-qq-QgC" secondAttribute="bottom" constant="10" id="Dmk-nJ-oeM"/>
+                            <constraint firstItem="3fz-Rf-3RS" firstAttribute="centerX" secondItem="iyM-oS-C6k" secondAttribute="centerX" id="ONk-CJ-SN3"/>
+                            <constraint firstItem="Od3-3r-Kg6" firstAttribute="centerX" secondItem="iyM-oS-C6k" secondAttribute="centerX" id="PkY-2p-cPr"/>
+                            <constraint firstItem="xax-qq-QgC" firstAttribute="centerX" secondItem="iyM-oS-C6k" secondAttribute="centerX" id="fwB-Rj-JHD"/>
+                            <constraint firstItem="Od3-3r-Kg6" firstAttribute="height" secondItem="iyM-oS-C6k" secondAttribute="height" multiplier="0.3" id="imc-6e-Crp"/>
+                            <constraint firstItem="xax-qq-QgC" firstAttribute="leading" secondItem="yiX-1V-a81" secondAttribute="leading" constant="20" id="riL-Rd-nuK"/>
+                            <constraint firstItem="Od3-3r-Kg6" firstAttribute="leading" secondItem="yiX-1V-a81" secondAttribute="leading" constant="10" id="uLE-F1-HnZ"/>
+                            <constraint firstItem="3fz-Rf-3RS" firstAttribute="top" secondItem="Od3-3r-Kg6" secondAttribute="bottom" constant="30" id="zsW-zv-L9C"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="imc-6e-Crp"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="imc-6e-Crp"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ueA-K3-T3c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="917.60000000000002" y="55.322338830584712"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="xcode_helper_macos_bigsur_icon_189446" width="256" height="256"/>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

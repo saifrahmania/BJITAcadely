@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--First View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="FirstViewController" customModule="Saifur_30016_Dec2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="House-of-the-Dragon-logo" translatesAutoresizingMaskIntoConstraints="NO" id="d8n-du-9T5">
+                                <rect key="frame" x="0.0" y="44" width="414" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="7Z9-H9-w7z"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DrV-4G-3KR">
+                                <rect key="frame" x="100" y="432" width="214" height="32"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Change Side">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" red="0.2588235438" green="0.5411764979" blue="0.88235294819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="15"/>
+                                    <color key="baseForegroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="UQb-nq-T5y" kind="show" identifier="MoveToSecondVC" id="pOD-lr-xmd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="d8n-du-9T5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="IXO-63-BHu"/>
+                            <constraint firstItem="d8n-du-9T5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="LMH-xq-U20"/>
+                            <constraint firstItem="DrV-4G-3KR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="OPP-uf-h3m"/>
+                            <constraint firstItem="d8n-du-9T5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Uju-Fy-Iyg"/>
+                            <constraint firstItem="DrV-4G-3KR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aiy-rC-dmy"/>
+                            <constraint firstItem="DrV-4G-3KR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="vjf-7m-Ui0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bgImage" destination="d8n-du-9T5" id="SrK-C9-sr2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="56.919642857142854"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="Ygb-6q-qhm">
+            <objects>
+                <viewController id="UQb-nq-T5y" customClass="SecondViewController" customModule="Saifur_30016_Dec2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="r4Z-LW-7uB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X2s-2m-UeD">
+                                <rect key="frame" x="100" y="405.5" width="214" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Green">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="clickGreenButton:" destination="UQb-nq-T5y" eventType="touchUpInside" id="ail-4S-2s3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="61p-kR-LzU">
+                                <rect key="frame" x="100" y="446.5" width="214" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Black">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="clickBlackButton:" destination="UQb-nq-T5y" eventType="touchUpInside" id="zWF-zh-Q8j"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rDh-PQ-MkS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="61p-kR-LzU" firstAttribute="top" secondItem="X2s-2m-UeD" secondAttribute="bottom" constant="10" id="9gl-7u-odF"/>
+                            <constraint firstItem="X2s-2m-UeD" firstAttribute="leading" secondItem="rDh-PQ-MkS" secondAttribute="leading" constant="100" id="SjF-sY-l6L"/>
+                            <constraint firstItem="X2s-2m-UeD" firstAttribute="centerX" secondItem="r4Z-LW-7uB" secondAttribute="centerX" id="eAE-F6-sYp"/>
+                            <constraint firstItem="61p-kR-LzU" firstAttribute="leading" secondItem="rDh-PQ-MkS" secondAttribute="leading" constant="100" id="f8Q-Y1-EF9"/>
+                            <constraint firstItem="X2s-2m-UeD" firstAttribute="centerY" secondItem="r4Z-LW-7uB" secondAttribute="centerY" id="fcQ-Ay-ZMF"/>
+                            <constraint firstItem="61p-kR-LzU" firstAttribute="centerX" secondItem="r4Z-LW-7uB" secondAttribute="centerX" id="tgS-1b-Znv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="e4T-KD-Dgs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kZ5-re-oIr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="865" y="57"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="House-of-the-Dragon-logo" width="2000" height="1098"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

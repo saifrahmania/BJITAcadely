@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3ru-YK-2QO">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Exercise1-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" userLabel="Exercise1" customClass="ViewController" customModule="Saifur_30016_Nov29" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="RootView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oeF-X7-7pD">
+                                <rect key="frame" x="10" y="208.5" width="355" height="250"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="Fe9-RX-ZVk" userLabel="Stack View (Horizontal)">
+                                        <rect key="frame" x="5" y="5" width="345" height="240"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="jGG-c6-AwM" userLabel="Stack View (Germany)">
+                                                <rect key="frame" x="0.0" y="0.0" width="345" height="109.5"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tw5-aW-94i">
+                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="36.5"/>
+                                                        <color key="backgroundColor" systemColor="labelColor"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2lI-m8-lWg">
+                                                        <rect key="frame" x="0.0" y="36.5" width="345" height="36.5"/>
+                                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Wp-W5-Npg">
+                                                        <rect key="frame" x="0.0" y="73" width="345" height="36.5"/>
+                                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hPC-91-wwo" userLabel="Stack View (Belgium)">
+                                                <rect key="frame" x="0.0" y="130.5" width="345" height="109.5"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vy7-Zs-bn2">
+                                                        <rect key="frame" x="0.0" y="0.0" width="115" height="109.5"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xDW-OL-uUU">
+                                                        <rect key="frame" x="115" y="0.0" width="115" height="109.5"/>
+                                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4GL-xK-Qin">
+                                                        <rect key="frame" x="230" y="0.0" width="115" height="109.5"/>
+                                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="hPC-91-wwo" firstAttribute="leading" secondItem="Fe9-RX-ZVk" secondAttribute="leading" id="2CC-fF-K2I"/>
+                                            <constraint firstAttribute="trailing" secondItem="hPC-91-wwo" secondAttribute="trailing" id="RXl-Ic-Eyj"/>
+                                            <constraint firstItem="jGG-c6-AwM" firstAttribute="leading" secondItem="Fe9-RX-ZVk" secondAttribute="leading" id="erI-Uf-nzZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="jGG-c6-AwM" secondAttribute="trailing" id="mDm-Iv-gD0"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Fe9-RX-ZVk" firstAttribute="leading" secondItem="oeF-X7-7pD" secondAttribute="leading" constant="5" id="46E-I7-gZK"/>
+                                    <constraint firstAttribute="bottom" secondItem="Fe9-RX-ZVk" secondAttribute="bottom" constant="5" id="Haz-8P-3mA"/>
+                                    <constraint firstItem="Fe9-RX-ZVk" firstAttribute="top" secondItem="oeF-X7-7pD" secondAttribute="top" constant="5" id="WY1-ES-Ofs"/>
+                                    <constraint firstAttribute="trailing" secondItem="Fe9-RX-ZVk" secondAttribute="trailing" constant="5" id="vgS-U0-9ME"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                        <constraints>
+                            <constraint firstItem="oeF-X7-7pD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="XYW-Eh-vIJ"/>
+                            <constraint firstItem="oeF-X7-7pD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Xex-9I-6TJ"/>
+                            <constraint firstItem="oeF-X7-7pD" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.375" id="kuH-L3-Yie"/>
+                            <constraint firstItem="oeF-X7-7pD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lfc-iO-533"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="55.580357142857139"/>
+        </scene>
+        <!--Exercise2-->
+        <scene sceneID="IIN-Qf-74G">
+            <objects>
+                <viewController id="OXj-5e-XWE" userLabel="Exercise2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iyM-oS-C6k" userLabel="RootView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mrW-HT-oQ9">
+                                <rect key="frame" x="10" y="167" width="355" height="333.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="mIy-Mm-vhv" userLabel="Stack View (Horizontal)">
+                                        <rect key="frame" x="20" y="20" width="315" height="293.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="MDn-FB-iAO">
+                                                <rect key="frame" x="0.0" y="0.0" width="315" height="144"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ATd-c3-HdO" userLabel="Stack View (Argentina)">
+                                                        <rect key="frame" x="0.0" y="0.0" width="152.5" height="144"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9N8-O8-VqX">
+                                                                <rect key="frame" x="0.0" y="0.0" width="152.5" height="48"/>
+                                                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fo3-Co-b2G">
+                                                                <rect key="frame" x="0.0" y="48" width="152.5" height="48"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x2q-Pv-Drl">
+                                                                <rect key="frame" x="0.0" y="96" width="152.5" height="48"/>
+                                                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                                            </view>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="xo9-EW-GpC" userLabel="Stack View (Germany)">
+                                                        <rect key="frame" x="162.5" y="0.0" width="152.5" height="144"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sN2-Zv-hQL">
+                                                                <rect key="frame" x="0.0" y="0.0" width="152.5" height="48"/>
+                                                                <color key="backgroundColor" systemColor="labelColor"/>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ufE-nM-rZW">
+                                                                <rect key="frame" x="0.0" y="48" width="152.5" height="48"/>
+                                                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RpI-KL-ipY">
+                                                                <rect key="frame" x="0.0" y="96" width="152.5" height="48"/>
+                                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                            </view>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="HMG-SI-e3Y" userLabel="Stack View (Belgium)">
+                                                <rect key="frame" x="0.0" y="149" width="315" height="144.5"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="odC-jg-sUV">
+                                                        <rect key="frame" x="0.0" y="0.0" width="105" height="144.5"/>
+                                                        <color key="backgroundColor" systemColor="labelColor"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wOU-gu-L5z">
+                                                        <rect key="frame" x="105" y="0.0" width="105" height="144.5"/>
+                                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9xQ-CW-lSh">
+                                                        <rect key="frame" x="210" y="0.0" width="105" height="144.5"/>
+                                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="mIy-Mm-vhv" secondAttribute="trailing" constant="20" symbolic="YES" id="2xV-yo-EDv"/>
+                                    <constraint firstItem="mIy-Mm-vhv" firstAttribute="leading" secondItem="mrW-HT-oQ9" secondAttribute="leading" constant="20" symbolic="YES" id="A4t-eT-fal"/>
+                                    <constraint firstItem="mIy-Mm-vhv" firstAttribute="top" secondItem="mrW-HT-oQ9" secondAttribute="top" constant="20" symbolic="YES" id="Kyb-9M-79v"/>
+                                    <constraint firstAttribute="bottom" secondItem="mIy-Mm-vhv" secondAttribute="bottom" constant="20" symbolic="YES" id="p5X-VX-2p4"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yiX-1V-a81"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="mrW-HT-oQ9" firstAttribute="centerY" secondItem="iyM-oS-C6k" secondAttribute="centerY" id="QcR-e5-KLm"/>
+                            <constraint firstItem="mrW-HT-oQ9" firstAttribute="leading" secondItem="yiX-1V-a81" secondAttribute="leading" constant="10" id="W7w-Tg-l5p"/>
+                            <constraint firstItem="mrW-HT-oQ9" firstAttribute="centerX" secondItem="iyM-oS-C6k" secondAttribute="centerX" id="Win-oP-dNR"/>
+                            <constraint firstItem="mrW-HT-oQ9" firstAttribute="height" secondItem="iyM-oS-C6k" secondAttribute="height" multiplier="0.5" id="huN-Fb-fop"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ueA-K3-T3c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="918.84057971014499" y="55.580357142857139"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="C1m-25-30M">
+            <objects>
+                <viewController id="3ru-YK-2QO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KFp-2J-Djp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qYN-WS-139">
+                                <rect key="frame" x="37.5" y="167" width="300" height="333.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="DwQ-Lz-AA9" userLabel="Stack View (Horizontal)">
+                                        <rect key="frame" x="8" y="8" width="284" height="317.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="EMi-hy-Gpc">
+                                                <rect key="frame" x="0.0" y="0.0" width="284" height="153.5"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="lDw-pz-GgM" userLabel="Stack View (Argentina)">
+                                                        <rect key="frame" x="0.0" y="0.0" width="137" height="153.5"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aPv-C0-CCe">
+                                                                <rect key="frame" x="0.0" y="0.0" width="137" height="51"/>
+                                                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UZx-ei-CXf">
+                                                                <rect key="frame" x="0.0" y="51" width="137" height="51.5"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5UG-b1-sbE">
+                                                                <rect key="frame" x="0.0" y="102.5" width="137" height="51"/>
+                                                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                                            </view>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ObI-mb-ewr" userLabel="Stack View (Germany)">
+                                                        <rect key="frame" x="147" y="0.0" width="137" height="153.5"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6M0-8t-hLm">
+                                                                <rect key="frame" x="0.0" y="0.0" width="137" height="51"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3VQ-ut-Flz">
+                                                                <rect key="frame" x="0.0" y="51" width="137" height="51.5"/>
+                                                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hwe-s9-LoD">
+                                                                <rect key="frame" x="0.0" y="102.5" width="137" height="51"/>
+                                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                            </view>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Ewl-Mp-urp" userLabel="Stack View (Belgium)">
+                                                <rect key="frame" x="0.0" y="163.5" width="284" height="154"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VBe-a4-H1h">
+                                                        <rect key="frame" x="0.0" y="0.0" width="94.5" height="154"/>
+                                                        <color key="backgroundColor" systemColor="labelColor"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U26-61-ip4">
+                                                        <rect key="frame" x="94.5" y="0.0" width="95" height="154"/>
+                                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uJN-up-ZhR">
+                                                        <rect key="frame" x="189.5" y="0.0" width="94.5" height="154"/>
+                                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="DwQ-Lz-AA9" secondAttribute="bottom" constant="8" id="0Wr-iR-fnT"/>
+                                    <constraint firstItem="DwQ-Lz-AA9" firstAttribute="leading" secondItem="qYN-WS-139" secondAttribute="leading" constant="8" id="42f-df-4bt"/>
+                                    <constraint firstAttribute="trailing" secondItem="DwQ-Lz-AA9" secondAttribute="trailing" constant="8" id="9fO-4n-nYP"/>
+                                    <constraint firstItem="DwQ-Lz-AA9" firstAttribute="top" secondItem="qYN-WS-139" secondAttribute="top" constant="8" id="LDY-qe-wHW"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KJi-3d-oP6"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="qYN-WS-139" firstAttribute="centerX" secondItem="KFp-2J-Djp" secondAttribute="centerX" id="0hi-oB-ovn"/>
+                            <constraint firstItem="qYN-WS-139" firstAttribute="height" secondItem="KFp-2J-Djp" secondAttribute="height" multiplier="0.5" id="VA5-Ga-c6u"/>
+                            <constraint firstItem="qYN-WS-139" firstAttribute="width" secondItem="KFp-2J-Djp" secondAttribute="width" multiplier="0.8" id="ZG8-24-ZoS"/>
+                            <constraint firstItem="qYN-WS-139" firstAttribute="centerY" secondItem="KFp-2J-Djp" secondAttribute="centerY" id="pXh-jA-xQr"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vz4-z5-OF0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1799.2" y="55.322338830584712"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemCyanColor">
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
