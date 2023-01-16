@@ -15,8 +15,9 @@ class JSONHandler{
    
     static let shared = JSONHandler()
     
-    func getPost(_ completion: @escaping (Welcome)->()){
-        guard let url  = URL(string:"https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=0c6314369f734e59878e25fd2cede7b3") else {return}
+    func getPost(_ category:String ,_ completion: @escaping (Welcome)->()){
+        print("\(category):from getpost")
+        guard let url  = URL(string:"\(Constant.apiLink)&category=\(category)&apiKey=\(Constant.apiKey)") else {return}
         let session = URLSession.shared.dataTask(with: url) { data, response, error in
             
             if let error = error {

@@ -10,7 +10,7 @@ import SDWebImage
 
 class TestVC: UIViewController {
     //var isSelected = false
-    var selectedIndex : IndexPath!
+    var selectedIndex  = IndexPath(row: 0, section: 0)
     var cellData = [Article]()
     
     @IBOutlet weak var tableView: UITableView!
@@ -18,7 +18,7 @@ class TestVC: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        JSONHandler.shared.getPost({ result in 
+        JSONHandler.shared.getPost("all" , { result in
             self.cellData  = result.articles
             DispatchQueue.main.async {
                 self.tableView.reloadData()
@@ -46,9 +46,9 @@ extension TestVC: UITableViewDataSource,UITableViewDelegate {
         cell.title.text = cellData[indexPath.row].title
         print(cellData[indexPath.row].title)
         cell.time.text = cellData[indexPath.row].publishedAt
-        print(cell.time.text!)
+        print(cell.time.text)
         cell.content.text   = cellData[indexPath.row].content
-        print(cell.content.text!)
+        print(cell.content.text)
         cell.thumbnail.sd_setImage(with: URL(string: cellData[indexPath.row].urlToImage ?? "https://cdn.abcotvs.com/dip/images/12685608_meag-millions.jpg?w=1600"), placeholderImage: UIImage(systemName: "pencil") )
         
        
@@ -71,6 +71,13 @@ extension TestVC: UICollectionViewDataSource, UICollectionViewDelegate{
         if let cell = collectionView.cellForItem(at: indexPath) as? TestCVC{
             cell.underLine.backgroundColor = .systemPink
             selectedIndex = indexPath
+            print("\(Constant.category[selectedIndex.row]): from did select")
+            JSONHandler.shared.getPost(Constant.category[selectedIndex.row] , { result in
+                self.cellData  = result.articles
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            })
         }
     }
     
@@ -78,7 +85,9 @@ extension TestVC: UICollectionViewDataSource, UICollectionViewDelegate{
         if let cell = collectionView.cellForItem(at: indexPath) as? TestCVC{
             cell.underLine.backgroundColor = .black
         }
+        
     }
+     
     
     
     
@@ -103,7 +112,7 @@ extension TestVC: UICollectionViewDataSource, UICollectionViewDelegate{
         return 1
     }
     
-
+    
     
     
 }
@@ -114,13 +123,7 @@ extension TestVC: UICollectionViewDelegateFlowLayout{
     }
 }
 
-
-extension TestVC{
-    func retrieveAtricle(jsonRes:[Article]){
-        print("JSON Response First Title: \(jsonRes[0].title)")
-        cellData = jsonRes
-    }
+     
     
-}
 
 

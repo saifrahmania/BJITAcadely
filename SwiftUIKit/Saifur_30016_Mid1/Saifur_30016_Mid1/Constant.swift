@@ -9,10 +9,12 @@ import Foundation
 
 
 class Constant{
-    static var category: [String] = ["Business", "Entertainment","Eeneral", "Health", "Science", "Sports", "Technology"]
+    static var category: [String] = ["all","business", "entertainment","eneral", "health", "science", "sports", "technology"]
     static var tabHeader = "tabHeader"
     static var tableRow = "tableRow"
     static var webpageSegueId = "webpageView"
     static var bookmarksSegueId = "bookmarkToDetails"
     static var homeSegueId = "homeToDetails"
+    static var apiLink = "https://newsapi.org/v2/top-headlines?country=us"
+    static var apiKey = "0c6314369f734e59878e25fd2cede7b3"
 }

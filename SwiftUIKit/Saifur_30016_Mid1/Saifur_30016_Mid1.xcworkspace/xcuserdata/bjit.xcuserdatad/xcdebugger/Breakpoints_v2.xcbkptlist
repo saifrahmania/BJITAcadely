@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "F2410EFF-FAA9-4455-BABD-8246526E5528"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BD781797-C68A-470A-96D3-04A4141D49A8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Saifur_30016_Mid1/JSONHandler.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "getPost(_:_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BD781797-C68A-470A-96D3-04A4141D49A8 - 3dcc974cf1aaeddd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Saifur_30016_Mid1.JSONHandler.getPost(Swift.String, (Saifur_30016_Mid1.Welcome) -&gt; ()) -&gt; ()"
+                  moduleName = "Saifur_30016_Mid1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bjit/Documents/GitHub/BJITAcadely/SwiftUIKit/Saifur_30016_Mid1/Saifur_30016_Mid1/JSONHandler.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "1240">
+               </Location>
+               <Location
+                  uuid = "BD781797-C68A-470A-96D3-04A4141D49A8 - 3a59df8f8d0878ba"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Saifur_30016_Mid1.JSONHandler.getPost(Swift.String, (Saifur_30016_Mid1.Welcome) -&gt; ()) -&gt; ()"
+                  moduleName = "Saifur_30016_Mid1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bjit/Documents/GitHub/BJITAcadely/SwiftUIKit/Saifur_30016_Mid1/Saifur_30016_Mid1/JSONHandler.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "200">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
