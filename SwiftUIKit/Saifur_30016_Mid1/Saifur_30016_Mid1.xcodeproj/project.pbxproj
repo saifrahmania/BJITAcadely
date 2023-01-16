@@ -29,9 +29,12 @@
 		89B34A612972786E00C6D58D /* News+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B34A5D2972786E00C6D58D /* News+CoreDataProperties.swift */; };
 		89B34A622972786E00C6D58D /* Bookmark+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B34A5E2972786E00C6D58D /* Bookmark+CoreDataClass.swift */; };
 		89B34A632972786E00C6D58D /* Bookmark+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B34A5F2972786E00C6D58D /* Bookmark+CoreDataProperties.swift */; };
+		BA6E0EB7BDDC4BE5381F45DE /* Pods_Saifur_30016_Mid1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09127E30782C1DE21420F7AE /* Pods_Saifur_30016_Mid1.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		09127E30782C1DE21420F7AE /* Pods_Saifur_30016_Mid1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Saifur_30016_Mid1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		28B403F30EE1847DEE0E1771 /* Pods-Saifur_30016_Mid1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Saifur_30016_Mid1.debug.xcconfig"; path = "Target Support Files/Pods-Saifur_30016_Mid1/Pods-Saifur_30016_Mid1.debug.xcconfig"; sourceTree = "<group>"; };
 		891458CF296FA5B000824837 /* Saifur_30016_Mid1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Saifur_30016_Mid1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		891458D2296FA5B000824837 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		891458D4296FA5B000824837 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +59,7 @@
 		89B34A5D2972786E00C6D58D /* News+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "News+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		89B34A5E2972786E00C6D58D /* Bookmark+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bookmark+CoreDataClass.swift"; sourceTree = "<group>"; };
 		89B34A5F2972786E00C6D58D /* Bookmark+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bookmark+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F0E4E04B351F70AAD13A304C /* Pods-Saifur_30016_Mid1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Saifur_30016_Mid1.release.xcconfig"; path = "Target Support Files/Pods-Saifur_30016_Mid1/Pods-Saifur_30016_Mid1.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,12 +67,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA6E0EB7BDDC4BE5381F45DE /* Pods_Saifur_30016_Mid1.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		241D9B808753E1B0BB3918A2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				09127E30782C1DE21420F7AE /* Pods_Saifur_30016_Mid1.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3C57C253B1397DD085B7C85B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				28B403F30EE1847DEE0E1771 /* Pods-Saifur_30016_Mid1.debug.xcconfig */,
+				F0E4E04B351F70AAD13A304C /* Pods-Saifur_30016_Mid1.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		891458C6296FA5B000824837 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +106,8 @@
 				891458F9297039F600824837 /* TestTVC.swift */,
 				891458D1296FA5B000824837 /* Saifur_30016_Mid1 */,
 				891458D0296FA5B000824837 /* Products */,
+				3C57C253B1397DD085B7C85B /* Pods */,
+				241D9B808753E1B0BB3918A2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,9 +147,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 891458E6296FA5B100824837 /* Build configuration list for PBXNativeTarget "Saifur_30016_Mid1" */;
 			buildPhases = (
+				AEE66C7A91CD8B5AA21CCD7A /* [CP] Check Pods Manifest.lock */,
 				891458CB296FA5B000824837 /* Sources */,
 				891458CC296FA5B000824837 /* Frameworks */,
 				891458CD296FA5B000824837 /* Resources */,
+				27E9F95F0583D220E8670FF4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -180,6 +207,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		27E9F95F0583D220E8670FF4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Saifur_30016_Mid1/Pods-Saifur_30016_Mid1-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Saifur_30016_Mid1/Pods-Saifur_30016_Mid1-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Saifur_30016_Mid1/Pods-Saifur_30016_Mid1-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AEE66C7A91CD8B5AA21CCD7A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Saifur_30016_Mid1-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		891458CB296FA5B000824837 /* Sources */ = {
@@ -346,6 +415,7 @@
 		};
 		891458E7296FA5B100824837 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28B403F30EE1847DEE0E1771 /* Pods-Saifur_30016_Mid1.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -373,6 +443,7 @@
 		};
 		891458E8296FA5B100824837 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0E4E04B351F70AAD13A304C /* Pods-Saifur_30016_Mid1.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

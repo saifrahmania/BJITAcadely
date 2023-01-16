@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class TestVC: UIViewController {
     //var isSelected = false
@@ -48,7 +49,7 @@ extension TestVC: UITableViewDataSource,UITableViewDelegate {
         print(cell.time.text!)
         cell.content.text   = cellData[indexPath.row].content
         print(cell.content.text!)
-        //cell.thumbnail.image =
+        cell.thumbnail.sd_setImage(with: URL(string: cellData[indexPath.row].urlToImage ?? "https://cdn.abcotvs.com/dip/images/12685608_meag-millions.jpg?w=1600"), placeholderImage: UIImage(systemName: "pencil") )
         
        
         
