@@ -30,10 +30,42 @@
             filePath = "TestVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3B5C1606-995A-47D1-9AC0-4A4453062C9C - d707592c918b6de7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Saifur_30016_Mid1.TestVC.viewDidLoad() -&gt; ()"
+                  moduleName = "Saifur_30016_Mid1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bjit/Documents/GitHub/BJITAcadely/SwiftUIKit/Saifur_30016_Mid1/TestVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "140">
+               </Location>
+               <Location
+                  uuid = "3B5C1606-995A-47D1-9AC0-4A4453062C9C - 49f8a5e509c83652"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Saifur_30016_Mid1.Welcome) -&gt; () in Saifur_30016_Mid1.TestVC.viewDidLoad() -&gt; ()"
+                  moduleName = "Saifur_30016_Mid1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bjit/Documents/GitHub/BJITAcadely/SwiftUIKit/Saifur_30016_Mid1/TestVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "216">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
