@@ -9,15 +9,13 @@ import Foundation
 import UIKit
 import CoreData
 
-protocol DataSender{
-    
-}
+
 
 class JSONHandler{
-    var homeDelegate: TestVC?
+   
     static let shared = JSONHandler()
     
-    func getPost(){
+    func getPost(_ completion: @escaping (Welcome)->()){
         guard let url  = URL(string:"https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=0c6314369f734e59878e25fd2cede7b3") else {return}
         let session = URLSession.shared.dataTask(with: url) { data, response, error in
             
@@ -31,9 +29,11 @@ class JSONHandler{
                 do {
                     let jsonRes = try JSONDecoder().decode(Welcome.self, from: data)
                     //print("Title:\(jsonRes.articles[0].title)")
-                    DispatchQueue.main.async {
-                        self.homeDelegate?.retrieveAtricle(jsonRes: jsonRes.articles)
-                    }
+                    completion(
+                        jsonRes
+                    )
+                    
+                    
                    
                     
                 } catch{

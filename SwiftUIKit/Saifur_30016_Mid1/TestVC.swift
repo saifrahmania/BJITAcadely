@@ -17,7 +17,12 @@ class TestVC: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        JSONHandler.shared.getPost()
+        JSONHandler.shared.getPost({ result in 
+            self.cellData  = result.articles
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        })
         tableView.delegate = self
         tableView.dataSource = self
         collectionView.dataSource = self
@@ -40,9 +45,9 @@ extension TestVC: UITableViewDataSource,UITableViewDelegate {
         cell.title.text = cellData[indexPath.row].title
         print(cellData[indexPath.row].title)
         cell.time.text = cellData[indexPath.row].publishedAt
-        print(cellData[indexPath.row].publishedAt)
+        print(cell.time.text!)
         cell.content.text   = cellData[indexPath.row].content
-        print(cellData[indexPath.row].content)
+        print(cell.content.text!)
         //cell.thumbnail.image =
         
        
