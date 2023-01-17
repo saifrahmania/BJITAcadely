@@ -18,16 +18,23 @@ class TestVC: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        syncTable("all")
+        /*
         JSONHandler.shared.getPost("all" , { result in
             self.cellData  = result.articles
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
         })
+         */
         tableView.delegate = self
         tableView.dataSource = self
         collectionView.dataSource = self
         collectionView.delegate = self
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        collectionView.collectionViewLayout = layout
+        
         
     }
 }
@@ -44,12 +51,10 @@ extension TestVC: UITableViewDataSource,UITableViewDelegate {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! TestTVC
         cell.title.text = cellData[indexPath.row].title
-        print(cellData[indexPath.row].title)
         cell.time.text = cellData[indexPath.row].publishedAt
-        print(cell.time.text)
         cell.content.text   = cellData[indexPath.row].content
-        print(cell.content.text)
         cell.thumbnail.sd_setImage(with: URL(string: cellData[indexPath.row].urlToImage ?? "https://cdn.abcotvs.com/dip/images/12685608_meag-millions.jpg?w=1600"), placeholderImage: UIImage(systemName: "pencil") )
+        cell.source.text = cellData[indexPath.row].source.name
         
        
         
@@ -71,13 +76,9 @@ extension TestVC: UICollectionViewDataSource, UICollectionViewDelegate{
         if let cell = collectionView.cellForItem(at: indexPath) as? TestCVC{
             cell.underLine.backgroundColor = .systemPink
             selectedIndex = indexPath
+            collectionView.reloadData()
             print("\(Constant.category[selectedIndex.row]): from did select")
-            JSONHandler.shared.getPost(Constant.category[selectedIndex.row] , { result in
-                self.cellData  = result.articles
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
-            })
+            syncTable(Constant.category[selectedIndex.row]) //Table is synced when it is tapped
         }
     }
     
@@ -88,23 +89,26 @@ extension TestVC: UICollectionViewDataSource, UICollectionViewDelegate{
         
     }
      
-    
-    
+    // MARK: - FUNCTION TO SYNC TABLE
+    func syncTable(_ category:String){
+        APICaller.jsonShare.getPost(category , { result in
+            self.cellData  = result.articles
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        })
+    }
     
    
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell  = collectionView.dequeueReusableCell(withReuseIdentifier: "testCategory", for: indexPath) as! TestCVC
         cell.category.text = Constant.category[indexPath.row]
-        cell.category.font = UIFont.systemFont(ofSize: 16, weight: .bold)
-        //cell.underLine.backgroundColor = .red
-        //collectionView.reloadData()
+        cell.category.font = UIFont.systemFont(ofSize: 16, weight: .bold)        
         if indexPath == selectedIndex{
             cell.underLine.backgroundColor = .systemPink
         }
         return cell
-        
-        //return UICollectionViewCell()
     }
        
     
@@ -116,10 +120,10 @@ extension TestVC: UICollectionViewDataSource, UICollectionViewDelegate{
     
     
 }
-
+// MARK: - DEFINE COLLECTIONVIEW SIZE
 extension TestVC: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 300, height: 70)
+        return CGSize(width: 280, height: 70)
     }
 }
 

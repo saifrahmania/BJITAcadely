@@ -29,6 +29,7 @@
 		89B34A612972786E00C6D58D /* News+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B34A5D2972786E00C6D58D /* News+CoreDataProperties.swift */; };
 		89B34A622972786E00C6D58D /* Bookmark+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B34A5E2972786E00C6D58D /* Bookmark+CoreDataClass.swift */; };
 		89B34A632972786E00C6D58D /* Bookmark+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B34A5F2972786E00C6D58D /* Bookmark+CoreDataProperties.swift */; };
+		89B34A6529764D8100C6D58D /* CoreDataShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B34A6429764D8100C6D58D /* CoreDataShare.swift */; };
 		BA6E0EB7BDDC4BE5381F45DE /* Pods_Saifur_30016_Mid1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09127E30782C1DE21420F7AE /* Pods_Saifur_30016_Mid1.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		89B34A5D2972786E00C6D58D /* News+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "News+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		89B34A5E2972786E00C6D58D /* Bookmark+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bookmark+CoreDataClass.swift"; sourceTree = "<group>"; };
 		89B34A5F2972786E00C6D58D /* Bookmark+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bookmark+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		89B34A6429764D8100C6D58D /* CoreDataShare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataShare.swift; sourceTree = "<group>"; };
 		F0E4E04B351F70AAD13A304C /* Pods-Saifur_30016_Mid1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Saifur_30016_Mid1.release.xcconfig"; path = "Target Support Files/Pods-Saifur_30016_Mid1/Pods-Saifur_30016_Mid1.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,7 +90,6 @@
 				28B403F30EE1847DEE0E1771 /* Pods-Saifur_30016_Mid1.debug.xcconfig */,
 				F0E4E04B351F70AAD13A304C /* Pods-Saifur_30016_Mid1.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -128,6 +129,7 @@
 				891458D8296FA5B000824837 /* Main.storyboard */,
 				89B34A58297265D200C6D58D /* Welcome.swift */,
 				89B34A5A2972661800C6D58D /* JSONHandler.swift */,
+				89B34A6429764D8100C6D58D /* CoreDataShare.swift */,
 				891458FB2970471E00824837 /* TestCVC.swift */,
 				891458ED296FD44700824837 /* Bookmarks.swift */,
 				89B34A4C2970FAE300C6D58D /* BookmarkTableRow.swift */,
@@ -256,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89B34A4B2970F22000C6D58D /* TestBVC.swift in Sources */,
+				89B34A6529764D8100C6D58D /* CoreDataShare.swift in Sources */,
 				89B34A5B2972661800C6D58D /* JSONHandler.swift in Sources */,
 				89B34A59297265D200C6D58D /* Welcome.swift in Sources */,
 				89B34A612972786E00C6D58D /* News+CoreDataProperties.swift in Sources */,

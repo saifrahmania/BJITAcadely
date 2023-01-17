@@ -14,42 +14,313 @@
             filePath = "Saifur_30016_Mid1/JSONHandler.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
             landmarkName = "getPost(_:_:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "BD781797-C68A-470A-96D3-04A4141D49A8 - 3dcc974cf1aaeddd"
+                  uuid = "BD781797-C68A-470A-96D3-04A4141D49A8 - ffc33864cd67536e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Saifur_30016_Mid1.JSONHandler.getPost(Swift.String, (Saifur_30016_Mid1.Welcome) -&gt; ()) -&gt; ()"
+                  symbolName = "Saifur_30016_Mid1.APICaller.getPost(Swift.String, (Saifur_30016_Mid1.Welcome) -&gt; ()) -&gt; ()"
                   moduleName = "Saifur_30016_Mid1"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/bjit/Documents/GitHub/BJITAcadely/SwiftUIKit/Saifur_30016_Mid1/Saifur_30016_Mid1/JSONHandler.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "1240">
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "1504">
                </Location>
                <Location
-                  uuid = "BD781797-C68A-470A-96D3-04A4141D49A8 - 3a59df8f8d0878ba"
+                  uuid = "BD781797-C68A-470A-96D3-04A4141D49A8 - b48dfb66b2602b3b"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Saifur_30016_Mid1.JSONHandler.getPost(Swift.String, (Saifur_30016_Mid1.Welcome) -&gt; ()) -&gt; ()"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Saifur_30016_Mid1.APICaller.getPost(Swift.String, (Saifur_30016_Mid1.Welcome) -&gt; ()) -&gt; ()"
                   moduleName = "Saifur_30016_Mid1"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/bjit/Documents/GitHub/BJITAcadely/SwiftUIKit/Saifur_30016_Mid1/Saifur_30016_Mid1/JSONHandler.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "200">
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "284">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7D8E6D60-652E-43AD-A5C1-5E9C17D6013D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TestVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1F673CFF-5D4C-4975-8DE7-A5D3DE3B09DD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Saifur_30016_Mid1/JSONHandler.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "getPost(_:_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4388DDB3-8A4A-431F-B98C-54307101DDCC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Saifur_30016_Mid1/JSONHandler.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "getPost(_:_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2783A260-3811-4EE7-B2BC-DDBAE7E66A1F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Saifur_30016_Mid1/CoreDataHandler.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "createEntry(author:category:content:description:name:publishedAt:title:url:urlToImage:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AEACB819-7EB4-4F2E-9B1C-8D20A043EFF2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Saifur_30016_Mid1/JSONHandler.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "APICaller"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "AEACB819-7EB4-4F2E-9B1C-8D20A043EFF2 - 1eddf9ef7640d96d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "one-time initialization function for jsonShare"
+                  moduleName = "Saifur_30016_Mid1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bjit/Documents/GitHub/BJITAcadely/SwiftUIKit/Saifur_30016_Mid1/Saifur_30016_Mid1/JSONHandler.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "AEACB819-7EB4-4F2E-9B1C-8D20A043EFF2 - 426a88e976011803"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Saifur_30016_Mid1.APICaller.jsonShare.unsafeMutableAddressor : Saifur_30016_Mid1.APICaller"
+                  moduleName = "Saifur_30016_Mid1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bjit/Documents/GitHub/BJITAcadely/SwiftUIKit/Saifur_30016_Mid1/Saifur_30016_Mid1/JSONHandler.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "51F40D23-483E-4760-B5FA-798DB3A3656E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Saifur_30016_Mid1/JSONHandler.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "getPost(_:_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "51F40D23-483E-4760-B5FA-798DB3A3656E - ffc33864cd67534f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Saifur_30016_Mid1.APICaller.getPost(Swift.String, (Saifur_30016_Mid1.Welcome) -&gt; ()) -&gt; ()"
+                  moduleName = "Saifur_30016_Mid1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bjit/Documents/GitHub/BJITAcadely/SwiftUIKit/Saifur_30016_Mid1/Saifur_30016_Mid1/JSONHandler.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "704">
+               </Location>
+               <Location
+                  uuid = "51F40D23-483E-4760-B5FA-798DB3A3656E - ffc33864cd67534f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Saifur_30016_Mid1.APICaller.getPost(Swift.String, (Saifur_30016_Mid1.Welcome) -&gt; ()) -&gt; ()"
+                  moduleName = "Saifur_30016_Mid1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bjit/Documents/GitHub/BJITAcadely/SwiftUIKit/Saifur_30016_Mid1/Saifur_30016_Mid1/JSONHandler.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "1492">
+               </Location>
+               <Location
+                  uuid = "51F40D23-483E-4760-B5FA-798DB3A3656E - ffc33864cd67534f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Saifur_30016_Mid1.APICaller.getPost(Swift.String, (Saifur_30016_Mid1.Welcome) -&gt; ()) -&gt; ()"
+                  moduleName = "Saifur_30016_Mid1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bjit/Documents/GitHub/BJITAcadely/SwiftUIKit/Saifur_30016_Mid1/Saifur_30016_Mid1/JSONHandler.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "1892">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C6B6E42E-F36A-4596-9C4C-EEB5BB570108"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Saifur_30016_Mid1/JSONHandler.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "getPost(_:_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C45D9DCD-8FDD-4053-83F7-A74740B4E844"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TestVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "syncTable(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C45D9DCD-8FDD-4053-83F7-A74740B4E844 - 6e7a57b6d7e80a65"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Saifur_30016_Mid1.TestVC.syncTable(Swift.String) -&gt; ()"
+                  moduleName = "Saifur_30016_Mid1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bjit/Documents/GitHub/BJITAcadely/SwiftUIKit/Saifur_30016_Mid1/TestVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "94"
+                  endingLineNumber = "94"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  uuid = "C45D9DCD-8FDD-4053-83F7-A74740B4E844 - 6f9a19ce5c6055c8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Saifur_30016_Mid1.Welcome) -&gt; () in Saifur_30016_Mid1.TestVC.syncTable(Swift.String) -&gt; ()"
+                  moduleName = "Saifur_30016_Mid1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bjit/Documents/GitHub/BJITAcadely/SwiftUIKit/Saifur_30016_Mid1/TestVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "95"
+                  endingLineNumber = "95"
+                  offsetFromSymbolStart = "216">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7FD5619D-0293-46E7-A6CF-FB23E998825E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TestVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "syncTable(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "588F2413-E79C-478A-A67B-B718ABEA42D0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Saifur_30016_Mid1/JSONHandler.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "getPost(_:_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
