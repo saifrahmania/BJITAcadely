@@ -19,12 +19,12 @@
 		891458F8297038A300824837 /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891458F7297038A300824837 /* TestVC.swift */; };
 		891458FA297039F600824837 /* TestTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891458F9297039F600824837 /* TestTVC.swift */; };
 		891458FC2970471E00824837 /* TestCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891458FB2970471E00824837 /* TestCVC.swift */; };
+		89AB26DC297672CA00EEE618 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AB26DB297672CA00EEE618 /* APICaller.swift */; };
 		89B34A4B2970F22000C6D58D /* TestBVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B34A4A2970F22000C6D58D /* TestBVC.swift */; };
 		89B34A4D2970FAE300C6D58D /* BookmarkTableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B34A4C2970FAE300C6D58D /* BookmarkTableRow.swift */; };
 		89B34A512971686300C6D58D /* ExtendedDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B34A502971686300C6D58D /* ExtendedDetails.swift */; };
 		89B34A53297182F300C6D58D /* WebpageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B34A52297182F300C6D58D /* WebpageView.swift */; };
 		89B34A59297265D200C6D58D /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B34A58297265D200C6D58D /* Welcome.swift */; };
-		89B34A5B2972661800C6D58D /* JSONHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B34A5A2972661800C6D58D /* JSONHandler.swift */; };
 		89B34A602972786E00C6D58D /* News+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B34A5C2972786E00C6D58D /* News+CoreDataClass.swift */; };
 		89B34A612972786E00C6D58D /* News+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B34A5D2972786E00C6D58D /* News+CoreDataProperties.swift */; };
 		89B34A622972786E00C6D58D /* Bookmark+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B34A5E2972786E00C6D58D /* Bookmark+CoreDataClass.swift */; };
@@ -50,12 +50,12 @@
 		891458F7297038A300824837 /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
 		891458F9297039F600824837 /* TestTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTVC.swift; sourceTree = "<group>"; };
 		891458FB2970471E00824837 /* TestCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCVC.swift; sourceTree = "<group>"; };
+		89AB26DB297672CA00EEE618 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		89B34A4A2970F22000C6D58D /* TestBVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBVC.swift; sourceTree = "<group>"; };
 		89B34A4C2970FAE300C6D58D /* BookmarkTableRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkTableRow.swift; sourceTree = "<group>"; };
 		89B34A502971686300C6D58D /* ExtendedDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendedDetails.swift; sourceTree = "<group>"; };
 		89B34A52297182F300C6D58D /* WebpageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebpageView.swift; sourceTree = "<group>"; };
 		89B34A58297265D200C6D58D /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
-		89B34A5A2972661800C6D58D /* JSONHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONHandler.swift; sourceTree = "<group>"; };
 		89B34A5C2972786E00C6D58D /* News+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "News+CoreDataClass.swift"; sourceTree = "<group>"; };
 		89B34A5D2972786E00C6D58D /* News+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "News+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		89B34A5E2972786E00C6D58D /* Bookmark+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bookmark+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -127,8 +127,8 @@
 				891458D4296FA5B000824837 /* SceneDelegate.swift */,
 				891458D6296FA5B000824837 /* ViewController.swift */,
 				891458D8296FA5B000824837 /* Main.storyboard */,
+				89AB26DB297672CA00EEE618 /* APICaller.swift */,
 				89B34A58297265D200C6D58D /* Welcome.swift */,
-				89B34A5A2972661800C6D58D /* JSONHandler.swift */,
 				89B34A6429764D8100C6D58D /* CoreDataShare.swift */,
 				891458FB2970471E00824837 /* TestCVC.swift */,
 				891458ED296FD44700824837 /* Bookmarks.swift */,
@@ -259,8 +259,8 @@
 			files = (
 				89B34A4B2970F22000C6D58D /* TestBVC.swift in Sources */,
 				89B34A6529764D8100C6D58D /* CoreDataShare.swift in Sources */,
-				89B34A5B2972661800C6D58D /* JSONHandler.swift in Sources */,
 				89B34A59297265D200C6D58D /* Welcome.swift in Sources */,
+				89AB26DC297672CA00EEE618 /* APICaller.swift in Sources */,
 				89B34A612972786E00C6D58D /* News+CoreDataProperties.swift in Sources */,
 				891458FC2970471E00824837 /* TestCVC.swift in Sources */,
 				89B34A622972786E00C6D58D /* Bookmark+CoreDataClass.swift in Sources */,

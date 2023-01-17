@@ -39,6 +39,9 @@ class APICaller{
                     for i in 0..<jsonRes.articles.count{
                         self.entryCreation.createEntry(author: jsonRes.articles[i].author ?? "Not Found", category: category, content: jsonRes.articles[i].content ?? "Not Found", description: jsonRes.articles[i].description ?? "Not Found", name: jsonRes.articles[i].source.name ?? "Not Found", publishedAt: jsonRes.articles[i].publishedAt ?? "Not Found", title: jsonRes.articles[i].title, url: jsonRes.articles[i].url ?? "Not Found", urlToImage: jsonRes.articles[i].urlToImage ?? "Not Found")
                     }
+                   let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+                            print(urls[urls.count-1] as URL)
+                    
                     
                 } catch{
                     print(error.localizedDescription)
