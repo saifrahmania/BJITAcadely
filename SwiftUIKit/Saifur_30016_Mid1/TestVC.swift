@@ -12,13 +12,13 @@ class TestVC: UIViewController {
     //var isSelected = false
     var selectedIndex  = IndexPath(row: 0, section: 0)
     var cellData = [Article]()
-    
+    var categoryName:String = ""
+    @IBOutlet weak var searchBar: UITextField!
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        syncTable("all")
         /*
         JSONHandler.shared.getPost("all" , { result in
             self.cellData  = result.articles
@@ -27,6 +27,9 @@ class TestVC: UIViewController {
             }
         })
          */
+      
+        
+
         tableView.delegate = self
         tableView.dataSource = self
         collectionView.dataSource = self
@@ -34,9 +37,35 @@ class TestVC: UIViewController {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         collectionView.collectionViewLayout = layout
+       // searchBar.addTarget(self, action: #selector(newsFinder), for: .editingChanged)
         
-        
+        syncTable("all") { [weak self] in
+            CoreDataShare.coreShare.getAllRecord()
+            guard let self = self else { return }
+            let records = News.newsArray
+            self.cellData.removeAll()
+            for record in records{
+                var source = Source(id: nil, name: nil)
+                var news = Article(source: source, author: record.author, title: record.title, description: record.descript, url: record.url, urlToImage: record.urlToImage, publishedAt: record.publishedAt, content: record.content)
+                self.cellData.append(news)
+            }
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
     }
+    
+/*    @objc func newsFinder(){
+        if let keywords = searchBar.text{
+            if keywords == "" {
+                CoreDataShare.coreShare.getAllRecord()
+                refreshNews()
+            } else{
+                CoreDataShare.coreShare.getRecord(category: categoryName, searchText: searchBar.text!)
+                refreshNews()
+            }
+        }
+    } */
 }
 
 
@@ -46,6 +75,23 @@ extension TestVC: UITableViewDataSource,UITableViewDelegate {
         print("total cell: \(cellData.count)")
         return cellData.count
     
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Constant.homeSegueId{
+            if let extendedDetails = segue.destination as? ExtendedDetails{
+                
+                extendedDetails.loadViewIfNeeded()
+                extendedDetails.newsCompany.text = cellData[selectedIndex.row].source.name
+                extendedDetails.newsTitle.text = cellData[selectedIndex.row].title
+                extendedDetails.newsAuthor.text = cellData[selectedIndex.row].author
+                extendedDetails.newsDate.text = cellData[selectedIndex.row].publishedAt
+                extendedDetails.newsDescription.text = cellData[selectedIndex.row].description
+                extendedDetails.storeURL = cellData[selectedIndex.row].url!
+                extendedDetails.storeImageURL = cellData[selectedIndex.row].urlToImage!
+                
+            }
+        }
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -76,9 +122,15 @@ extension TestVC: UICollectionViewDataSource, UICollectionViewDelegate{
         if let cell = collectionView.cellForItem(at: indexPath) as? TestCVC{
             cell.underLine.backgroundColor = .systemPink
             selectedIndex = indexPath
+            categoryName = Constant.category[selectedIndex.row]
+            
             collectionView.reloadData()
-            print("\(Constant.category[selectedIndex.row]): from did select")
-            syncTable(Constant.category[selectedIndex.row]) //Table is synced when it is tapped
+            print("\(categoryName): from did select")
+            syncTable(categoryName) {
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            } //Table is synced when it is tapped
         }
     }
     
@@ -88,14 +140,17 @@ extension TestVC: UICollectionViewDataSource, UICollectionViewDelegate{
         }
         
     }
+    
+    
+    
+    func refreshNews(){
+        tableView.reloadData()
+    }
      
     // MARK: - FUNCTION TO SYNC TABLE
-    func syncTable(_ category:String){
+    func syncTable(_ category:String, completion: @escaping () ->  Void){
         APICaller.jsonShare.getPost(category , { result in
-            self.cellData  = result.articles
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
+            completion()
         })
     }
     
@@ -115,6 +170,8 @@ extension TestVC: UICollectionViewDataSource, UICollectionViewDelegate{
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
+    
+    
     
     
     

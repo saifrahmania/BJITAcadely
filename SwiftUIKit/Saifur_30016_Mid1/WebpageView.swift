@@ -14,11 +14,18 @@ class WebpageView: UIViewController {
     @IBOutlet weak var webView: WKWebView!
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    
+    var showPage = ""
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
+         let webView = WKWebView(frame: view.bounds)
+                 view.addSubview(webView)
+                 
+                 guard let url = URL(string: showPage ?? "") else { return }
+                 webView.load(URLRequest(url: url))
+         
+         
     }
     
 

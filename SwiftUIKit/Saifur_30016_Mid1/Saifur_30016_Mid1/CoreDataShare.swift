@@ -19,20 +19,19 @@ class CoreDataShare{
     private init() {}
 
     //return All data from the persistant container
-    func getAllItems() -> [News]  {
+    func getAllRecord()  {
         do{
-            models = try context.fetch(News.fetchRequest())
-         
-     
+            News.newsArray = try context.fetch(News.fetchRequest())
+            print("Title",News.newsArray[0].title)
 
         } catch{
             print(error)
         }
-        return models
+        
         
     }
 
-    func createEntry(author:String,category:String,content:String,description:String,name:String,publishedAt:String,title:String,url:String,urlToImage:String){
+    func createEntry(author:String,category:String,content:String,description:String,name:String,publishedAt:String,title:String,url:String,urlToImage:String,source:String){
         let newsEntry = News(context: context)
         newsEntry.author = author
         newsEntry.category = category
@@ -43,14 +42,15 @@ class CoreDataShare{
         newsEntry.title = title
         newsEntry.url = url
         newsEntry.urlToImage = urlToImage
+        newsEntry.source = source
         
-        /*do{
+        do{
             try context.save()
         } catch{
             print(error.localizedDescription)
-        }*/
+        }
        
-        DispatchQueue.main.async { [weak self] in
+       /* DispatchQueue.main.async { [weak self] in
             guard let self = self else {return}
             
             do{
@@ -61,9 +61,36 @@ class CoreDataShare{
 
 
 
-        }
+        }*/
         
     }
+    
+    func getRecord(category:String, searchText:String) ->[News]?{
+        let fetchRequest = NSFetchRequest<News>(entityName: "News")
+        let format = "catagoryName = %@ && title CONTAINS[c] %@"
+        let predicate = NSPredicate(format: format, category,searchText)
+        fetchRequest.predicate = predicate
+        
+        var result: [News]?
+        do {
+            result = try context.fetch(fetchRequest)
+            return result
+        } catch {
+            print(error)
+            return nil
+        }
+    }
+    
+    func deleteAll(){
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "News")
+            let allDelete = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+
+            do {
+                try context.execute(allDelete)
+            } catch let error as NSError {
+                print(error.localizedDescription)
+            }
+        }
 
     
 }

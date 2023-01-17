@@ -1,5 +1,5 @@
 //
-//  News+CoreDataProperties.swift
+//  Bookmark+CoreDataProperties.swift
 //  
 //
 //  Created by BJIT on 17/1/23.
@@ -10,10 +10,10 @@ import Foundation
 import CoreData
 
 
-extension News {
+extension Bookmark {
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<News> {
-        return NSFetchRequest<News>(entityName: "News")
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<Bookmark> {
+        return NSFetchRequest<Bookmark>(entityName: "Bookmark")
     }
 
     @NSManaged public var author: String?
@@ -27,6 +27,6 @@ extension News {
     @NSManaged public var urlToImage: String?
     @NSManaged public var source: String?
     
-    static var newsArray = [News]()
+    
 
 }

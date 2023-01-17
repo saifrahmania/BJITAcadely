@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ExtendedDetails: UIViewController {
     
@@ -22,22 +23,30 @@ class ExtendedDetails: UIViewController {
     
     @IBOutlet weak var newsDescription: UILabel!
     
-    
+    var storeURL = ""
+    var storeImageURL = ""
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        self.newsThumbnail.sd_setImage(with: URL(string: storeImageURL ) )
+        
     }
-    /*
-    // MARK: - Navigation
+    
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+  
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == Constant.webkitSegue{
+            if let webkitSegue = segue.destination as? WebpageView{
+                webkitSegue.showPage = storeURL
+            }
+        }
     }
-    */
-
+    
+    @IBAction func readMore(_ sender: UIButton) {
+        performSegue(withIdentifier: Constant.webkitSegue, sender: nil)
+    }
+    
+    
 }
