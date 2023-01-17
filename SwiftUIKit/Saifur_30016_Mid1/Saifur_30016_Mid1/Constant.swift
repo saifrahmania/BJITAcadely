@@ -13,6 +13,7 @@ class Constant{
     static var tabHeader = "tabHeader"
     static var tableRow = "tableRow"
     static var webpageSegueId = "webpageView"
+    static var webkitSegue = "showToWebkit"
     static var bookmarksSegueId = "bookmarkToDetails"
     static var homeSegueId = "homeToDetails"
     static var apiLink = "https://newsapi.org/v2/top-headlines?country=us"
