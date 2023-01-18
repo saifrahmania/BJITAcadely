@@ -18,4 +18,5 @@ class Constant{
     static var homeSegueId = "homeToDetails"
     static var apiLink = "https://newsapi.org/v2/top-headlines?country=us"
     static var apiKey = "0c6314369f734e59878e25fd2cede7b3"
+    static var homeToDetails = "homeToDetails"
 }

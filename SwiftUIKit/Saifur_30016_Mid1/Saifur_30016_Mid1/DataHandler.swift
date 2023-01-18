@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - Welcome
-struct Welcome: Codable {
+struct DataHandler: Codable {
     let status: String
     let totalResults: Int
     let articles: [Article]

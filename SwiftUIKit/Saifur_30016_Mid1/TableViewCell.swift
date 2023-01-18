@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TestTVC: UITableViewCell {
+class TableViewCell: UITableViewCell {
     
     @IBOutlet weak var thumbnail: UIImageView!
     

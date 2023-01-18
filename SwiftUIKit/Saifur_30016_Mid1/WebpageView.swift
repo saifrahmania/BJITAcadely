@@ -22,7 +22,7 @@ class WebpageView: UIViewController {
          let webView = WKWebView(frame: view.bounds)
                  view.addSubview(webView)
                  
-                 guard let url = URL(string: showPage ?? "") else { return }
+        guard let url = URL(string: showPage ) else { return }
                  webView.load(URLRequest(url: url))
          
          
