@@ -14,11 +14,11 @@ import CoreData
 class APICaller{
     
     static let jsonShare = APICaller()
-    var entryCreation = CoreDataShare.coreShare
+    var entryCreation = CoreDataDB.coreShare
     
     private init() {}
     
-    func getPost(_ category:String ,_ completion: @escaping (Welcome)->()){
+    func getPost(_ category:String ,_ completion: @escaping (DataHandler)->()){
         print("\(category):from getpost")
         guard let url  = URL(string:"\(Constant.apiLink)&category=\(category != "all" ? category : "")&apiKey=\(Constant.apiKey)") else {return}
         let session = URLSession.shared.dataTask(with: url) { data, response, error in
@@ -31,7 +31,7 @@ class APICaller{
                     return
                 }
                 do {
-                    let jsonRes = try JSONDecoder().decode(Welcome.self, from: data)
+                    let jsonRes = try JSONDecoder().decode(DataHandler.self, from: data)
                     //print("Title:\(jsonRes.articles[0].title)")
                     completion(
                         jsonRes

@@ -27,6 +27,6 @@ extension Bookmark {
     @NSManaged public var urlToImage: String?
     @NSManaged public var source: String?
     
-    
+    static var bookmarkArray = [Bookmark]()
 
 }

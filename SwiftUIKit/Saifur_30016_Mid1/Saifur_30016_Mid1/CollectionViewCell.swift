@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TestCVC: UICollectionViewCell {
+class CollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var underLine: UIView!
     @IBOutlet weak var category: UILabel!

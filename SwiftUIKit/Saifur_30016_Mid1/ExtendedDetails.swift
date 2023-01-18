@@ -7,7 +7,7 @@
 
 import UIKit
 import SDWebImage
-
+//JSON
 class ExtendedDetails: UIViewController {
     
     @IBOutlet weak var newsCompany: UILabel!
@@ -29,7 +29,8 @@ class ExtendedDetails: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print(storeURL)
+        print(storeImageURL)
         self.newsThumbnail.sd_setImage(with: URL(string: storeImageURL ) )
         
     }

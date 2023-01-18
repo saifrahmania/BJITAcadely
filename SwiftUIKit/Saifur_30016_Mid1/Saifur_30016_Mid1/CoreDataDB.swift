@@ -11,8 +11,8 @@ import CoreData
 
 
 
-class CoreDataShare{
-    static let coreShare = CoreDataShare()
+class CoreDataDB{
+    static let coreShare = CoreDataDB()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var models = [News]()
 
@@ -22,7 +22,7 @@ class CoreDataShare{
     func getAllRecord()  {
         do{
             News.newsArray = try context.fetch(News.fetchRequest())
-            print("Title",News.newsArray[0].title)
+            //print("Title",News.newsArray[0].title)
 
         } catch{
             print(error)
@@ -65,9 +65,9 @@ class CoreDataShare{
         
     }
     
-    func getRecord(category:String, searchText:String) ->[News]?{
+ /*   func getRecord(category:String, searchText:String) ->[News]?{
         let fetchRequest = NSFetchRequest<News>(entityName: "News")
-        let format = "catagoryName = %@ && title CONTAINS[c] %@"
+        let format = "categoryName = %@ && title CONTAINS[c] %@"
         let predicate = NSPredicate(format: format, category,searchText)
         fetchRequest.predicate = predicate
         
@@ -78,6 +78,22 @@ class CoreDataShare{
         } catch {
             print(error)
             return nil
+        }
+    } */
+    func getRecord(category:String, searchText:String) {
+        print("from get rec: a\(category)")
+        let fetchRequest = NSFetchRequest<News>(entityName: "News")
+        let format = "category = %@ && title CONTAINS[c] %@"
+        let predicate = NSPredicate(format: format, category,searchText)
+        fetchRequest.predicate = predicate
+        
+        
+        do {
+            News.newsArray = try context.fetch(fetchRequest)
+            
+        } catch {
+            print(error)
+            
         }
     }
     
