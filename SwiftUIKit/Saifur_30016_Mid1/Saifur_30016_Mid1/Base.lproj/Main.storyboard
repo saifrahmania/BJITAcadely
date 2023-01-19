@@ -428,7 +428,6 @@
                                         <connections>
                                             <outlet property="bookmarkThumbnail" destination="ghe-Qw-qDN" id="zTc-HH-9EC"/>
                                             <outlet property="bookmarkTitle" destination="Lfp-gE-PVa" id="RUh-bA-rdR"/>
-                                            <segue destination="cgd-lw-fzX" kind="show" identifier="bookmarkToDetails" id="79b-GW-5fl"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -467,6 +466,7 @@
                     <connections>
                         <outlet property="newsTable" destination="Ec1-Sl-M4z" id="5qh-wW-Mua"/>
                         <outlet property="searchTextfield" destination="I8Z-FF-dae" id="fIG-zd-tEw"/>
+                        <segue destination="cgd-lw-fzX" kind="show" identifier="bookmarkToDetails" id="kKC-3y-LXM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GPM-cJ-UxW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -532,7 +532,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="79b-GW-5fl"/>
+        <segue reference="kKC-3y-LXM"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="book" catalog="system" width="128" height="99"/>

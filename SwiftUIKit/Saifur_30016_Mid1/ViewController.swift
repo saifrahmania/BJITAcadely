@@ -38,6 +38,8 @@ class ViewController: UIViewController {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         collectionView.collectionViewLayout = layout
+        tableView.refreshControl = UIRefreshControl()
+        tableView.refreshControl?.addTarget(self, action: #selector(didPullToRefresh), for: .valueChanged)
         searchBar.addTarget(self, action: #selector(newsFinder), for: .editingChanged)
         
         syncTable("all") { [weak self] in
@@ -55,6 +57,29 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    @objc private func didPullToRefresh(){
+            DispatchQueue.main.asyncAfter(deadline: .now()+0.1) {
+                print("start refresh")
+                self.syncTable("all"){
+                    [weak self] in
+                        CoreDataDB.coreShare.getAllRecord()
+                        guard let self = self else { return }
+                        let records = News.newsArray
+                        self.cellData.removeAll()
+                        for record in records{
+                            let source = Source(id: nil, name: record.source)
+                            let news = Article(source: source, author: record.author, title: record.title, description: record.descript, url: record.url, urlToImage: record.urlToImage, publishedAt: record.publishedAt, content: record.content)
+                            self.cellData.append(news)
+                        }
+                        DispatchQueue.main.async {
+                            self.tableView.reloadData()
+                        }
+                }
+                self.tableView.reloadData()
+                self.tableView.refreshControl?.endRefreshing()
+            }
+        }
     
   @objc func newsFinder(){
         if let keywords = searchBar.text{
@@ -81,7 +106,12 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    
 }
+
+
+
 
 
 
@@ -109,7 +139,7 @@ extension ViewController: UITableViewDataSource,UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableRowIndex = indexPath.row
-        performSegue(withIdentifier: Constant.bookmarksSegueId, sender: nil)
+        performSegue(withIdentifier: Constant.homeToDetails, sender: nil)
         tableView.deselectRow(at: indexPath, animated: true)
        
     }
@@ -130,10 +160,10 @@ extension ViewController: UITableViewDataSource,UITableViewDelegate {
             }
         }
     }
-    
+    /*
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
-        let saveBookmark = UIContextualAction(style: .normal, title: ""){ [weak self]  _,_, _ in
+        let saveBookmark = UIContextualAction(style: .normal, title: "Bookmark"){ [weak self]  action, view, completionHandler in
             guard let self = self else {
                             return
             }
@@ -144,7 +174,17 @@ extension ViewController: UITableViewDataSource,UITableViewDelegate {
         }
         let actions = UISwipeActionsConfiguration(actions: [saveBookmark])
         return actions
-    }
+    }*/
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+            let action = UIContextualAction(style: .normal,
+                                            title: "Bookmark") { [weak self] (action, view, completionHandler) in
+                self?.saveToBookmark(indexPath: indexPath)
+                completionHandler(true)
+            }
+            action.backgroundColor = .systemBlue
+            return UISwipeActionsConfiguration(actions: [action])
+        }
     
     func saveToBookmark(indexPath: IndexPath){
         

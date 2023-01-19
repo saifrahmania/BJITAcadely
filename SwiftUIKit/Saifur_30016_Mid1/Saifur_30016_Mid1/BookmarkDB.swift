@@ -60,6 +60,21 @@ class BookmarkDB{
         
     }
     
+    func deleteRecord(at index: Int,
+                      from expenseList: [Bookmark],
+                      completion: (Int) -> ()) {
+        
+        let item = expenseList[index]
+        bookmarkContext.delete(item)
+        
+        do {
+            try bookmarkContext.save()
+            completion(index)
+        } catch {
+            print(error)
+        }
+    }
+    
     func getRecord( searchText:String) {
         
         let fetchRequest = NSFetchRequest<Bookmark>(entityName: "Bookmark")

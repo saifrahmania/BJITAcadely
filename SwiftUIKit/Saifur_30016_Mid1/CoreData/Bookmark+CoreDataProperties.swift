@@ -16,6 +16,7 @@ extension Bookmark {
         return NSFetchRequest<Bookmark>(entityName: "Bookmark")
     }
 
+    
     @NSManaged public var author: String?
     @NSManaged public var category: String?
     @NSManaged public var content: String?

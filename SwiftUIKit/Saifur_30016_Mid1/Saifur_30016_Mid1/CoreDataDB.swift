@@ -81,7 +81,7 @@ class CoreDataDB{
         }
     } */
     func getRecord(category:String, searchText:String) {
-        print("from get rec: a\(category)")
+        print("from get rec: \(category)")
         let fetchRequest = NSFetchRequest<News>(entityName: "News")
         let format = "category = %@ && title CONTAINS[c] %@"
         let predicate = NSPredicate(format: format, category,searchText)

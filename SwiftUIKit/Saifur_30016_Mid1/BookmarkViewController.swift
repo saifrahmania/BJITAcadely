@@ -7,10 +7,12 @@
 
 import UIKit
 import SDWebImage
+import CoreData
 
 class BookmarkViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     var bookmarkIndex = 0
      var bookmarkCell = [Article]()
+    var bookmarkDatabase:[Bookmark]!
 
     @IBOutlet weak var searchTextfield: UITextField!
     
@@ -27,7 +29,7 @@ class BookmarkViewController: UIViewController, UITableViewDelegate, UITableView
         DispatchQueue.main.async {
             self.newsTable.reloadData()
         }
-       /* syncBookmark { [weak self] in
+        syncBookmark { [weak self] in
             BookmarkDB.bookmarkShare.bookmarkAllRecord()
             guard let self = self else { return }
             let records = News.newsArray
@@ -40,7 +42,7 @@ class BookmarkViewController: UIViewController, UITableViewDelegate, UITableView
             DispatchQueue.main.async {
                 self.newsTable.reloadData()
             }
-        }*/
+        }
         
     }
     
@@ -53,6 +55,11 @@ class BookmarkViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print("bookmark: \(Bookmark.bookmarkArray.count)")
         return Bookmark.bookmarkArray.count
+    }
+    
+    
+    func refreshNews(){
+        newsTable.reloadData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -73,6 +80,24 @@ class BookmarkViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
+  /*  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Constant.bookmarksSegueId{
+            if let extendedDetails = segue.destination as? ExtendedDetails{
+                
+                extendedDetails.loadViewIfNeeded()
+                extendedDetails.newsCompany.text = bookmarkCell[bookmarkIndex].source.name
+                extendedDetails.newsTitle.text = bookmarkCell[bookmarkIndex].title
+                extendedDetails.newsAuthor.text = bookmarkCell[bookmarkIndex].author
+                extendedDetails.newsDate.text = bookmarkCell[bookmarkIndex].publishedAt
+                extendedDetails.newsDescription.text = bookmarkCell[bookmarkIndex].description
+                extendedDetails.storeURL = bookmarkCell[bookmarkIndex].url!
+                extendedDetails.storeImageURL = bookmarkCell[bookmarkIndex].urlToImage!
+              
+                
+            }
+        }
+    }*/
+    
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -83,6 +108,20 @@ class BookmarkViewController: UIViewController, UITableViewDelegate, UITableView
        
         return tableRow
     }
+     
+    
+    
+    
+    
+    
+/*    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let tableRow = newsTable.dequeueReusableCell(withIdentifier: "bookmarkTable", for: indexPath) as! BookmarkTableRow
+        tableRow.bookmarkTitle.text = bookmarkCell[indexPath.row].title
+        tableRow.bookmarkThumbnail.sd_setImage(with: URL(string: bookmarkCell[indexPath.row].urlToImage! ), placeholderImage: UIImage(systemName: "pencil") )
+        
+       
+        return tableRow
+    }*/
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         bookmarkIndex = indexPath.row
@@ -94,11 +133,11 @@ class BookmarkViewController: UIViewController, UITableViewDelegate, UITableView
     
     
     // MARK: - FUNCTION TO SYNC TABLE
-    /*
+    
     func syncBookmark(complition: @escaping ()->Void){
         BookmarkDB.bookmarkShare.getAllRecord()
     }
-     */
+     
 
     
 
